@@ -6,8 +6,8 @@ from pydantic_settings import (
 
 
 class Bot(BaseModel):
-    token: str = ""
-    admins: int = int()
+    token: str
+    admins: int
 
 
 class Settings(BaseSettings):
@@ -20,7 +20,7 @@ class Settings(BaseSettings):
         env_nested_delimiter="__",
         env_prefix="APP_CONFIG__",
     )
-    bot: Bot = Bot()
+    bot: Bot
 
 
 settings = Settings()
